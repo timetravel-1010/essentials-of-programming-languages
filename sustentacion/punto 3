@@ -1,0 +1,8 @@
+programa 1:
+
+global() const a = 1; in {a}
+
+programa 2:
+
+global() const a = 1; in {assign a => true; 
+in {a}}

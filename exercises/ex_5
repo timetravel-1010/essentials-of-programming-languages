@@ -1,0 +1,8 @@
+global ( x = 5 , y = 3 , w = 4 , p = 3)
+
+var x = 9 , z = 4 , p = 7; in {
+assign  x => 8,  y => 1, z => 2; in { 
+
+  op( op( op( op( x + y ) + z ) + p) + w)
+
+}}

@@ -1,0 +1,17 @@
+global() var X = 1, Y = 2, 
+F1 = func(a) {assign a => true; in {1}},
+F2 = func(b) {assign b => true; in {1}}; in {
+sequence { 
+eval F1[X], eval F2[@Y], [X,Y]
+}}
+
+con unic:
+
+global() unic X = #non-value, Y = #non-value, 
+F1 = func(a) {assign a => true; in {1}},
+F2 = func(b) {assign b => true; in {1}}; in {
+sequence { 
+eval F1[X], eval F2[@Y], cons(X,Y)
+}}
+
+

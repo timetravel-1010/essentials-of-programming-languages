@@ -1,0 +1,9 @@
+programa 1: 
+
+global() unic x = #non-value; in {
+assign x => 1; in { x } }
+
+
+programa 2:
+
+

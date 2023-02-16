@@ -1,0 +1,20 @@
+global(entero1 = op(1+3), entero2 = op(4 - 2)) 
+
+var flotante1 = op(1.2+0.8), flotante2 = op(9.1 - 2.0);
+in {
+	var entero3 = op(entero1*entero2),
+		entero4 = op(entero1 / entero2),
+		flotante3 = op(flotante1 * flotante2),
+		flotante4 = op(4.0 / 2.0); in {
+
+		assign flotante3 => ++ op(flotante2 + op(flotante1 % 2.0)),
+				flotante1 => --flotante2,
+				entero1 => ++entero3,
+				entero2 => -- op(entero4 % entero1); in { 
+
+					op(op(x8(2) +_oct x8(4)) *_oct --_oct op(op(x8(2) -_oct ++_oct x8(0)) -_oct x8(1)))
+}}}
+
+enteros: +,-,*,/,++,--,%
+flotantes: +,-,*,/,++,--,%
+octales: +,*,--,-,++,
