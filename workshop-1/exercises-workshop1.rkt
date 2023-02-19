@@ -1,24 +1,24 @@
 #lang eopl
 
 ;------------------------------------------------------
-;Ejercicios
+;Exercises
 ;------------------------------------------------------
 
-;ejercicio 1
-;; sublistas :
-;; Proposito:
-;; Procedimiento que cuenta la cantidad de sublistas que posee una lista
+; Exercise 1
+;; sublists :
+;; Purpose:
+;; Procedure that counts the number of sublists in a list.
 ;;
-(define sublistas
+(define sublists
   (lambda (l)
     (cond
       [(null? l) 0]
       [(list? (car l))
-       (+ 1 (+ (sublistas(car l)) (sublistas(cdr l))))]
-      [else (sublistas(cdr l))])))
-;;Pruebas:
-(sublistas '(4 5 8 (1 2) 8 (7 8 9 (2 4))))
-(sublistas '(((a b) c) (1 (2 (3 4)) (d e f (g))) 5 ((6 (7) 8) 9)))
+       (+ 1 (+ (sublists(car l)) (sublists(cdr l))))]
+      [else (sublists(cdr l))])))
+;; Tests:
+(sublists '(4 5 8 (1 2) 8 (7 8 9 (2 4))))
+(sublists '(((a b) c) (1 (2 (3 4)) (d e f (g))) 5 ((6 (7) 8) 9)))
 
 
 ;; ejercicio 2
